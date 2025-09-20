@@ -1,43 +1,43 @@
-## Watch the tutorial video at [Toturial Video](https://www.youtube.com/watch?v=O0X6NoQyEf0)
+# Iris Flower Prediction API – Flask  
 
-Install the [google cloud CLI](https://cloud.google.com/sdk/docs/install) based on your operating system and make sure the gcloud command works 
+This project demonstrates how to build a simple **Flask API** for predicting the species of an Iris flower using the **Iris dataset** from `sklearn`.  
+The model is trained with a **RandomForestClassifier**, and the API exposes an endpoint to get predictions based on input flower measurements.  
 
+---
 
+## 📊 Dataset  
 
-```
-gcloud init
-```
-Make sure you have authenticated with the correct email Id and selected the correct project id and region
-```
-gcloud auth login
-```
+- **Source**: `sklearn.datasets.load_iris()`  
+- The dataset contains 150 samples of iris flowers with 4 features:  
+  - `sepal_length`  
+  - `sepal_width`  
+  - `petal_length`  
+  - `petal_width`  
 
-Also make sure you have enabled the folllowing API's
-1. Artifact Registry
-2. Cloud build
+Target labels correspond to flower species:  
+- **0 → setosa**  
+- **1 → versicolor**  
+- **2 → virginica**  
 
-In your GCP command line run:
-```
-gcloud services enable cloudbuild.googleapis.com
+---
 
-```
+## 🧠 Model  
 
-To dockerize the application run
-Cloud Build takes the directory you are currently in (or the path you specify) and looks for a Dockerfile or other build instructions to create a Docker container.
+- **Algorithm**: RandomForestClassifier (from `sklearn.ensemble`)  
+- The model is trained on the Iris dataset and serialized for use in the API.  
 
-```
-gcloud builds submit --tag gcr.io/[YOUR_PROJ_ID]/iris-app
-```  
+---
 
-Deploying container to Cloud Run service
+## 🌐 API Endpoints  
 
-```
-gcloud run deploy iris-app --image gcr.io/[YOUR_PROJ_ID]/iris-app --platform managed --port 8501 --allow-unauthenticated   
-```
+### `POST /predict`  
 
-Once the application is deployed you can update the deployed URL in your frontend source code (streamlit_app.py). then run 
+**Input JSON format:**  
 
-```
-streamlit run streamlit_app.py
-```
-
+```json
+{
+  "sepal_length": 5.1,
+  "sepal_width": 3.5,
+  "petal_length": 1.4,
+  "petal_width": 0.2
+}
