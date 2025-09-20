@@ -6,5 +6,5 @@ The Streamlit app provides a simple form for entering housing data, sends the in
 
 ---
 
-## 📂 Project Structure  
+
 
