@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Quality</title>
+    <link rel="stylesheet" href="/statics/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wine Quality Predictor</h1>
+        
+        <form id="predictionForm">
+            <input type="number" step="0.1" name="fixed_acidity" placeholder="Fixed Acidity" required>
+            <input type="number" step="0.01" name="volatile_acidity" placeholder="Volatile Acidity" required>
+            <input type="number" step="0.01" name="citric_acid" placeholder="Citric Acid" required>
+            <input type="number" step="0.1" name="residual_sugar" placeholder="Residual Sugar" required>
+            <input type="number" step="0.001" name="chlorides" placeholder="Chlorides" required>
+            <input type="number" step="1" name="free_sulfur_dioxide" placeholder="Free Sulfur Dioxide" required>
+            <input type="number" step="1" name="total_sulfur_dioxide" placeholder="Total Sulfur Dioxide" required>
+            <input type="number" step="0.0001" name="density" placeholder="Density" required>
+            <input type="number" step="0.01" name="pH" placeholder="pH" required>
+            <input type="number" step="0.01" name="sulphates" placeholder="Sulphates" required>
+            <input type="number" step="0.1" name="alcohol" placeholder="Alcohol %" required>
+            
+            <button type="submit">Predict</button>
+        </form>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="/statics/script.js"></script>
+</body>
+</html>
