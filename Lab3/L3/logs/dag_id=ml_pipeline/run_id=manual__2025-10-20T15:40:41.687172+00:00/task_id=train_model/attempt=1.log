@@ -1,0 +1,18 @@
+[2025-10-20T15:40:43.985+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline.train_model manual__2025-10-20T15:40:41.687172+00:00 [queued]>
+[2025-10-20T15:40:43.990+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline.train_model manual__2025-10-20T15:40:41.687172+00:00 [queued]>
+[2025-10-20T15:40:43.990+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-10-20T15:40:43.997+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): train_model> on 2025-10-20 15:40:41.687172+00:00
+[2025-10-20T15:40:44.004+0000] {standard_task_runner.py:57} INFO - Started process 189 to run task
+[2025-10-20T15:40:44.007+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline', 'train_model', 'manual__2025-10-20T15:40:41.687172+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp6cocyrin']
+[2025-10-20T15:40:44.020+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask train_model
+[2025-10-20T15:40:44.092+0000] {task_command.py:416} INFO - Running <TaskInstance: ml_pipeline.train_model manual__2025-10-20T15:40:41.687172+00:00 [running]> on host 06dab7733895
+[2025-10-20T15:40:44.144+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='nidhi.mallik2001@gmail.com' AIRFLOW_CTX_DAG_OWNER='mlops' AIRFLOW_CTX_DAG_ID='ml_pipeline' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2025-10-20T15:40:41.687172+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-20T15:40:41.687172+00:00'
+[2025-10-20T15:40:44.169+0000] {logging_mixin.py:154} INFO - Data loaded: (1000, 10)
+[2025-10-20T15:40:44.240+0000] {logging_mixin.py:154} INFO - Accuracy: 97.67%
+[2025-10-20T15:40:44.240+0000] {logging_mixin.py:154} INFO - F1 Score: 97.64%
+[2025-10-20T15:40:44.247+0000] {logging_mixin.py:154} INFO - Model saved!
+[2025-10-20T15:40:44.248+0000] {logging_mixin.py:154} INFO - Training complete: {'accuracy': 0.9766666666666667, 'f1_score': 0.9764309764309764}
+[2025-10-20T15:40:44.248+0000] {python.py:194} INFO - Done. Returned value was: {'accuracy': 0.9766666666666667, 'f1_score': 0.9764309764309764}
+[2025-10-20T15:40:44.280+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ml_pipeline, task_id=train_model, execution_date=20251020T154041, start_date=20251020T154043, end_date=20251020T154044
+[2025-10-20T15:40:44.313+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-10-20T15:40:44.330+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
