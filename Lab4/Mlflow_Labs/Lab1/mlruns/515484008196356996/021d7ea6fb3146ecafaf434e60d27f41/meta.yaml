@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab1/mlruns/515484008196356996/021d7ea6fb3146ecafaf434e60d27f41/artifacts
+end_time: 1761931930107
+entry_point_name: ''
+experiment_id: '515484008196356996'
+lifecycle_stage: active
+run_id: 021d7ea6fb3146ecafaf434e60d27f41
+run_name: gifted-vole-34
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761931925380
+status: 3
+tags: []
+user_id: nidhi

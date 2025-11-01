@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab2/mlruns/0/9496306987384f7f87953082a20e6e57/artifacts
+end_time: 1761932910814
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9496306987384f7f87953082a20e6e57
+run_name: untuned_random_forest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761932909681
+status: 3
+tags: []
+user_id: nidhi

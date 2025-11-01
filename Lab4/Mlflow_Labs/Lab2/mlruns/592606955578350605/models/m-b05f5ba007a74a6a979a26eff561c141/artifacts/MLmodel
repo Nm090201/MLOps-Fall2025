@@ -1,0 +1,34 @@
+artifact_path: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab2/mlruns/592606955578350605/models/m-b05f5ba007a74a6a979a26eff561c141/artifacts
+flavors:
+  python_function:
+    cloudpickle_version: 3.1.1
+    code: null
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.12.2
+    streamable: false
+is_signature_from_type_hint: false
+mlflow_version: 3.5.1
+model_id: m-b05f5ba007a74a6a979a26eff561c141
+model_size_bytes: 665867
+model_uuid: m-b05f5ba007a74a6a979a26eff561c141
+prompts: null
+run_id: 3432f8c1da264de08cec14231c667361
+signature:
+  inputs: '[{"type": "double", "name": "fixed_acidity", "required": true}, {"type":
+    "double", "name": "volatile_acidity", "required": true}, {"type": "double", "name":
+    "citric_acid", "required": true}, {"type": "double", "name": "residual_sugar",
+    "required": true}, {"type": "double", "name": "chlorides", "required": true},
+    {"type": "double", "name": "free_sulfur_dioxide", "required": true}, {"type":
+    "double", "name": "total_sulfur_dioxide", "required": true}, {"type": "double",
+    "name": "density", "required": true}, {"type": "double", "name": "pH", "required":
+    true}, {"type": "double", "name": "sulphates", "required": true}, {"type": "double",
+    "name": "alcohol", "required": true}, {"type": "long", "name": "is_red", "required":
+    true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-10-31 21:42:13.441913'

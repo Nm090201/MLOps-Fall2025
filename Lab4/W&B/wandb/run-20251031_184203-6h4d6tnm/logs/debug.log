@@ -1,0 +1,15 @@
+2025-10-31 18:42:03,677 INFO    MainThread:43649 [wandb_setup.py:_flush():81] Current SDK version is 0.22.3
+2025-10-31 18:42:03,677 INFO    MainThread:43649 [wandb_setup.py:_flush():81] Configure stats pid to 43649
+2025-10-31 18:42:03,677 INFO    MainThread:43649 [wandb_setup.py:_flush():81] Loading settings from /Users/nidhi/.config/wandb/settings
+2025-10-31 18:42:03,677 INFO    MainThread:43649 [wandb_setup.py:_flush():81] Loading settings from /Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/W&B/wandb/settings
+2025-10-31 18:42:03,677 INFO    MainThread:43649 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-10-31 18:42:03,678 INFO    MainThread:43649 [wandb_init.py:setup_run_log_directory():706] Logging user logs to /Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/W&B/wandb/run-20251031_184203-6h4d6tnm/logs/debug.log
+2025-10-31 18:42:03,678 INFO    MainThread:43649 [wandb_init.py:setup_run_log_directory():707] Logging internal logs to /Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/W&B/wandb/run-20251031_184203-6h4d6tnm/logs/debug-internal.log
+2025-10-31 18:42:03,678 INFO    MainThread:43649 [wandb_init.py:init():833] calling init triggers
+2025-10-31 18:42:03,678 INFO    MainThread:43649 [wandb_init.py:init():838] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.001, 'epochs': 5, 'batch_size': 128, '_wandb': {}}
+2025-10-31 18:42:03,678 INFO    MainThread:43649 [wandb_init.py:init():881] starting backend
+2025-10-31 18:42:03,906 INFO    MainThread:43649 [wandb_init.py:init():884] sending inform_init request
+2025-10-31 18:42:03,939 INFO    MainThread:43649 [wandb_init.py:init():892] backend started and connected
+2025-10-31 18:42:03,943 INFO    MainThread:43649 [wandb_init.py:init():962] updated telemetry
+2025-10-31 18:42:03,973 INFO    MainThread:43649 [wandb_init.py:init():986] communicating run to backend with 90.0 second timeout

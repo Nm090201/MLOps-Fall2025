@@ -1,0 +1,15 @@
+creation_timestamp: 1761946937779
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1761946937779
+model_id: m-b05f5ba007a74a6a979a26eff561c141
+name: wine_quality
+run_id: 3432f8c1da264de08cec14231c667361
+run_link: null
+source: models:/m-b05f5ba007a74a6a979a26eff561c141
+status: READY
+status_message: null
+storage_location: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab2/mlruns/592606955578350605/models/m-b05f5ba007a74a6a979a26eff561c141/artifacts
+user_id: null
+version: 3

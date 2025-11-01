@@ -1,0 +1,28 @@
+artifact_path: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab1/mlruns/515484008196356996/models/m-5deb835465bb45398f463a31dc3fff6e/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.4
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+is_signature_from_type_hint: false
+mlflow_version: 3.5.1
+model_id: m-5deb835465bb45398f463a31dc3fff6e
+model_size_bytes: 835
+model_uuid: m-5deb835465bb45398f463a31dc3fff6e
+prompts: null
+run_id: 021d7ea6fb3146ecafaf434e60d27f41
+signature:
+  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 4]}}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-10-31 17:32:05.437027'

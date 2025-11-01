@@ -1,0 +1,22 @@
+artifact_path: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab1/mlruns/578344839643035447/models/m-e6a69b9bc1a440c4b0e357c63278f0ec/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+mlflow_version: 3.5.1
+model_id: m-e6a69b9bc1a440c4b0e357c63278f0ec
+model_size_bytes: 655
+model_uuid: m-e6a69b9bc1a440c4b0e357c63278f0ec
+prompts: null
+run_id: 13b0e11741f042d4a809dcd5afaeb1dc
+utc_time_created: '2025-10-31 17:10:05.225357'

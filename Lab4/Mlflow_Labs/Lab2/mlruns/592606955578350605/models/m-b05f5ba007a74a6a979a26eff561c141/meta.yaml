@@ -1,0 +1,10 @@
+artifact_location: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab2/mlruns/592606955578350605/models/m-b05f5ba007a74a6a979a26eff561c141/artifacts
+creation_timestamp: 1761946933435
+experiment_id: '592606955578350605'
+last_updated_timestamp: 1761946933465
+model_id: m-b05f5ba007a74a6a979a26eff561c141
+model_type: null
+name: random_forest_model
+source_run_id: 3432f8c1da264de08cec14231c667361
+status: 2
+status_message: null

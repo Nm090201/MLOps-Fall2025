@@ -1,0 +1,8 @@
+aliases:
+  production: '3'
+creation_timestamp: 1761932918621
+deployment_job_id: null
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1761947221971
+name: wine_quality

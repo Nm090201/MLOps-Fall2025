@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab1/mlruns/578344839643035447/13b0e11741f042d4a809dcd5afaeb1dc/artifacts
+end_time: 1761930605260
+entry_point_name: ''
+experiment_id: '578344839643035447'
+lifecycle_stage: active
+run_id: 13b0e11741f042d4a809dcd5afaeb1dc
+run_name: brawny-lamb-666
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761930599596
+status: 3
+tags: []
+user_id: nidhi

@@ -1,0 +1,9 @@
+digest: 94a5f244
+name: dataset
+profile: '{"features_shape": [353, 10], "features_size": 3530, "features_nbytes":
+  28240}'
+schema: '{"mlflow_tensorspec": {"features": "[{\"type\": \"tensor\", \"tensor-spec\":
+  {\"dtype\": \"float64\", \"shape\": [-1, 10]}}]", "targets": null}}'
+source: '{"tags": {"mlflow.user": "nidhi", "mlflow.source.name": "/Users/nidhi/Library/Python/3.12/lib/python/site-packages/ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

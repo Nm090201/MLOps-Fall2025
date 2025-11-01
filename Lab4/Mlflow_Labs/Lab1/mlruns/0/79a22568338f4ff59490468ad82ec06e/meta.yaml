@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab1/mlruns/0/79a22568338f4ff59490468ad82ec06e/artifacts
+end_time: 1761698585725
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 79a22568338f4ff59490468ad82ec06e
+run_name: rambunctious-mule-73
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761698579892
+status: 3
+tags: []
+user_id: nidhi

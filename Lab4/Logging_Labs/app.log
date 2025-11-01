@@ -1,0 +1,6 @@
+An error noccurred while dividing by zero
+Traceback (most recent call last):
+  File "/var/folders/y3/9j1qvwrn2c707dddt2y7bs5m0000gn/T/ipykernel_35625/1941895218.py", line 2, in <module>
+    result = 10 / 0  # This will raise a ZeroDivisionError
+             ~~~^~~
+ZeroDivisionError: division by zero

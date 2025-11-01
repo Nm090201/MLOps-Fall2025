@@ -1,0 +1,6 @@
+artifact_location: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab1/mlruns/515484008196356996
+creation_time: 1761931924912
+experiment_id: '515484008196356996'
+last_update_time: 1761931924912
+lifecycle_stage: active
+name: iris-classification

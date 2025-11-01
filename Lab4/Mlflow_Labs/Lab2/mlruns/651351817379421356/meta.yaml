@@ -1,0 +1,6 @@
+artifact_location: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab2/mlruns/651351817379421356
+creation_time: 1761933486548
+experiment_id: '651351817379421356'
+last_update_time: 1761933486548
+lifecycle_stage: active
+name: wine-quality

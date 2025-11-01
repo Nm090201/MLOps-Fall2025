@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab1/mlruns/976079658797861372/33318edd63454239bfd7b829b0d35bf1/artifacts
+end_time: 1761931357207
+entry_point_name: ''
+experiment_id: '976079658797861372'
+lifecycle_stage: active
+run_id: 33318edd63454239bfd7b829b0d35bf1
+run_name: capable-shoat-570
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761931352643
+status: 3
+tags: []
+user_id: nidhi

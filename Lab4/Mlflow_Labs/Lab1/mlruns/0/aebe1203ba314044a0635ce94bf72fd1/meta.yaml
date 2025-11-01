@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab1/mlruns/0/aebe1203ba314044a0635ce94bf72fd1/artifacts
+end_time: 1761697745409
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: aebe1203ba314044a0635ce94bf72fd1
+run_name: bald-ray-801
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761697741810
+status: 3
+tags: []
+user_id: nidhi

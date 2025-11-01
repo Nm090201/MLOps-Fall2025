@@ -1,0 +1,10 @@
+artifact_location: file:///Users/nidhi/Desktop/MLOps-main/Labs/Experiment_Tracking_Labs/Mlflow_Labs/Lab1/mlruns/515484008196356996/models/m-771263a3c2be420aa3ef5d3e197dae8a/artifacts
+creation_timestamp: 1761931950983
+experiment_id: '515484008196356996'
+last_updated_timestamp: 1761931954285
+model_id: m-771263a3c2be420aa3ef5d3e197dae8a
+model_type: null
+name: model
+source_run_id: 894ccfe7044b43dc93c16aef3529bd1c
+status: 2
+status_message: null
