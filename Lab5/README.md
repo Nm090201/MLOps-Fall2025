@@ -1,5 +1,5 @@
 # GCP Terraform Image Hosting Project
-!(image.png)
+(image.png)
 This Terraform project deploys a simple web application on Google Cloud Platform that hosts and displays an image through a VM running Nginx.
 
 # What It Does
@@ -15,5 +15,5 @@ Creates a complete infrastructure that:
 - GCP Service Account credentials
 - An image file to upload
 
-!(results/terraform_GCP_!.png)
-!(results/terraform_GCP_2.png)
+(results/terraform_GCP_!.png)
+(results/terraform_GCP_2.png)
