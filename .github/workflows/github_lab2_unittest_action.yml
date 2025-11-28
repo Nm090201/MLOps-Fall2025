@@ -19,9 +19,11 @@ jobs:
         python-version: 3.8
 
     - name: Install dependencies
+      working-directory: ./Lab6/string_manipulation
       run: pip install -r requirements.txt
 
     - name: Run unittests
+      working-directory: ./Lab6/string_manipulation
       run: python -m unittest test.test_unittest
 
     - name: Notify on success
