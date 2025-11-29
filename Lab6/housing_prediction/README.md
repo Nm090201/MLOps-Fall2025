@@ -30,13 +30,6 @@ An automated machine learning pipeline that trains a housing price prediction mo
 4. Downloads data, trains model, and evaluates performance
 5. Uploads trained model to GCS with timestamp (e.g., `model_20231129143022.joblib`)
 
-## Prerequisites
-
-- GitHub account with repository access
-- Google Cloud Platform account with active project
-- GCP service account with Storage Object Admin permissions
-- Google Cloud Storage bucket
-- GitHub repository secret configured with GCP service account JSON key
 
 ## Model Storage
 
@@ -45,11 +38,6 @@ Each training run creates a new model file in GCS:
 - Format: `model_YYYYMMDDHHMMSS.joblib`
 - Enables tracking, comparison, and rollback capabilities
 
-## Cost Considerations
-
-- **GitHub Actions**: 2,000 free minutes/month (each run takes 1-3 minutes)
-- **GCS Storage**: ~$0.02/GB/month (models are typically <1 MB each)
-- Models accumulate over time; consider implementing cleanup policies
 
 ## Monitoring
 
@@ -57,23 +45,5 @@ Each training run creates a new model file in GCS:
 - Check GCS bucket in Google Cloud Console for uploaded models
 - Common issues: verify secrets, bucket access, and service account permissions
 
-## Learning Outcomes
-
-- CI/CD pipelines with GitHub Actions
-- Cloud integration with GCP
-- Secure secret management
-- Docker containerization
-- Automated ML workflows (MLOps)
-- Model versioning and storage
-
-## Future Enhancements
-
-- Automated model version tracking and comparison
-- Email notifications for run status
-- Cleanup policies for old models
-- Model deployment pipeline for serving predictions
-- Performance monitoring and alerting
-
----
 
 This pipeline demonstrates MLOps best practices: automation, reproducibility, and cloud integration for machine learning workflows.
