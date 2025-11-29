@@ -29,7 +29,8 @@ The system uses GitHub Actions to automatically:
 - **Python**: Core implementation language
 
 ## Workflow Structure
-![Workflow Structure](image.png)
+![Workflow Structure](Lab3.png)
+![Workflow Structure](Lab3(1).png)
 
 The diagram shows the complete CI/CD pipeline flow from code commit to model deployment in GCS.
 
