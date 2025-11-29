@@ -19,6 +19,7 @@ jobs:
         python-version: '3.10'
     
     - name: Install dependencies
+      working-directory: ./Lab6/housing_prediction
       run: |
         pip install -r requirements.txt
     
@@ -31,5 +32,6 @@ jobs:
       uses: google-github-actions/setup-gcloud@v1
     
     - name: Train and save model
+      working-directory: ./Lab6/housing_prediction
       run: |
         python train_housing_model.py
