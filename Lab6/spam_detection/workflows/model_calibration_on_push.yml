@@ -1,0 +1,65 @@
+name: Spam Detector Retraining on Push to Main
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on pushes to the main branch
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Generate and Store Timestamp
+      run: |
+        timestamp=$(date '+%Y%m%d%H%M%S')
+        echo "$timestamp" > timestamp.txt
+      id: timestamp 
+
+    - name: Check File Permissions
+      run: |
+        ls -l ./train_spam_detector.py
+
+    - name: Set File Permissions
+      run: |
+        chmod +x ./train_spam_detector.py
+
+    - name: Retrain Spam Detection Model
+      run: |
+        timestamp=$(cat timestamp.txt)
+        python ./train_spam_detector.py --timestamp "$timestamp"
+
+    - name: Evaluate Model and Log Metrics
+      run: |
+        timestamp=$(cat timestamp.txt)
+        python ./evaluate_spam_detector.py --timestamp "$timestamp"
+        metrics_filename="${timestamp}_results.json"
+        mv metrics/$metrics_filename $GITHUB_WORKSPACE/metrics/$metrics_filename
+      continue-on-error: false
+
+    - name: Store and Version the New Model
+      run: |
+        timestamp=$(cat timestamp.txt)
+        model_filename="spam_model_${timestamp}.joblib"
+        mv $model_filename $GITHUB_WORKSPACE/models/$model_filename
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions Bot"
+        git add metrics/ models/
+        git commit -m "Update spam detector: model and metrics for ${timestamp}"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
