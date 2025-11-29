@@ -68,7 +68,7 @@ def main():
     print(f'R² Score: {r2:.2f}')
     
     # Save to cloud
-    bucket_name = "github-action-lab"
+    bucket_name = "github-action-labb"
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     blob_name = f"grade_models/model_{timestamp}.joblib"
     
