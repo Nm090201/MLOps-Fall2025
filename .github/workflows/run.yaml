@@ -1,0 +1,71 @@
+name: Train Student Grade Model and Save to GCS
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run every day at midnight UTC
+  workflow_dispatch: # Allow manual trigger of the workflow
+  push:
+    branches:
+      - main
+    paths:
+      - 'Lab6/grade_prediction/**' # Only trigger when grade prediction files change
+
+jobs:
+  train_and_save:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      id-token: write  # Required for google-github-actions/auth@v2
+    
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Get cache dir
+        id: pip-cache-dir
+        run: echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
+      
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.pip-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('Lab6/grade_prediction/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r Lab6/grade_prediction/requirements.txt
+      
+      - name: Authenticate with GCP
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: Train and save grade prediction model
+        run: |
+          python Lab6/grade_prediction/train_grade_model.py
+        env:
+          PYTHONUNBUFFERED: 1  # Ensure real-time output in logs
+        
+      - name: Verify model upload
+        run: |
+          echo "Model training and upload completed successfully!"
+          echo "Check your GCS bucket: gs://github-action-labb/grade_models/"  # Fixed the bucket name
+          
+      - name: Upload training logs (optional)
+        if: always()  # Run even if training fails
+        uses: actions/upload-artifact@v4
+        with:
+          name: training-logs
+          path: |
+            *.log
+            Lab6/grade_prediction/*.log
+          if-no-files-found: ignore
