@@ -27,10 +27,6 @@ This project implements comprehensive unit testing using two different Python te
 - More verbose but no external dependencies
 - Traditional approach inspired by JUnit
 
-Both test suites cover:
-- Normal functionality with valid inputs
-- Edge cases (empty strings, single characters, special cases)
-- Error handling for invalid inputs (wrong types, invalid arguments)
 
 ## Continuous Integration with GitHub Actions
 The project includes two automated CI/CD workflows that run automatically on code changes:
@@ -48,18 +44,13 @@ Triggers on pushes to the main branch. Similar setup process but uses Python's u
 - Generating and managing test reports
 - Maintaining code quality through automated testing
 
-## Benefits of This Approach
-- Automated testing catches bugs early in development
-- Multiple testing frameworks provide flexibility and redundancy
-- CI/CD ensures tests run consistently in clean environments
-- Test reports provide visibility into code quality
-- Documentation through tests serves as usage examples
-
 ## Workflow Triggers
 The automated tests run when:
 - Code is pushed to specified branches
 - Pull requests are created
 - Issues are opened or labeled
 - Labels are created on the repository
+
+![Github Actions](Lab1.png)
 
 This ensures that all code changes are automatically validated before being merged into the main codebase.
