@@ -32,6 +32,6 @@ jobs:
       uses: google-github-actions/setup-gcloud@v1
     
     - name: Train and save model
-      working-directory: ./Lab6/housing_prediction
+      working-directory: ./Lab6/housing_prediction/src
       run: |
         python train_housing_model.py
