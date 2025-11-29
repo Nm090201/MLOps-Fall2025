@@ -45,5 +45,13 @@ Each training run creates a new model file in GCS:
 - Check GCS bucket in Google Cloud Console for uploaded models
 - Common issues: verify secrets, bucket access, and service account permissions
 
+## Visual Overview
+
+### Workflow Execution
+![GitHub Actions Workflow](Lab4.png)
+
+### Model Storage in GCS
+![Google Cloud Storage](Lab4(1).png)
+
 
 This pipeline demonstrates MLOps best practices: automation, reproducibility, and cloud integration for machine learning workflows.
