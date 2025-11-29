@@ -58,7 +58,7 @@ jobs:
       - name: Verify model upload
         run: |
           echo "Model training and upload completed successfully!"
-          echo "Check your GCS bucket: gs://github-action-lab/grade_models/"
+          echo "Check your GCS bucket: gs://github-action-labb/grade_models/"  # Fixed the bucket name
           
       - name: Upload training logs (optional)
         if: always()  # Run even if training fails

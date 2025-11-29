@@ -42,13 +42,25 @@ def train_model(X_train, y_train):
     return model
 
 # Save to GCS
-def save_model_to_gcs(model, bucket_name, blob_name):
-    joblib.dump(model, "grade_model.joblib")
-    
-    storage_client = storage.Client()
-    bucket = storage_client.bucket(bucket_name)
-    blob = bucket.blob(blob_name)
-    blob.upload_from_filename('grade_model.joblib')
+def save_model_to_gcs(model, bucket_name, blob_name, project_id):
+    try:
+        joblib.dump(model, "grade_model.joblib")
+        print(f"Model saved locally as grade_model.joblib")
+        
+        storage_client = storage.Client(project=project_id)
+        bucket = storage_client.bucket(bucket_name)
+        
+        # Check if bucket exists
+        if not bucket.exists():
+            raise ValueError(f"Bucket {bucket_name} does not exist in project {project_id}!")
+        
+        blob = bucket.blob(blob_name)
+        blob.upload_from_filename('grade_model.joblib')
+        print(f"Model uploaded successfully to gs://{bucket_name}/{blob_name}")
+        
+    except Exception as e:
+        print(f"Error saving model to GCS: {e}")
+        raise
 
 # Main pipeline
 def main():
@@ -68,11 +80,12 @@ def main():
     print(f'R² Score: {r2:.2f}')
     
     # Save to cloud
+    project_id = "github-actions-ml-pipeline"  # Add this line
     bucket_name = "github-action-labb"
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     blob_name = f"grade_models/model_{timestamp}.joblib"
     
-    save_model_to_gcs(model, bucket_name, blob_name)
+    save_model_to_gcs(model, bucket_name, blob_name, project_id)  # Pass project_id
     print(f"Model saved to gs://{bucket_name}/{blob_name}")
 
 if __name__ == "__main__":
